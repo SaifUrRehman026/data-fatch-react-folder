@@ -1,0 +1,23 @@
+.scroll-container {
+  display: flex;
+  overflow-x: auto;   /* enables horizontal scroll */
+  gap: 1rem;          /* space between cards */
+  padding: 1rem;
+  scrollbar-width: thin; /* optional, nice scrollbar */
+}
+
+.card-wrapper {
+  flex: 0 0 auto;     /* prevent shrinking, keeps items side by side */
+}
+.searchbar{
+  float:right;
+  margin-top: 15px ; 
+}
+
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem; /* Adds gap between rows and columns */
+  padding: 1rem;
+}

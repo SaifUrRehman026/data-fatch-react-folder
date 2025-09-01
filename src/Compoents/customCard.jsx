@@ -16,7 +16,7 @@ const CustomCard = ({id, username, email, phone,company,  address,  showDetails,
     <Card className={`h-100 custom-card ${theme} shadow-sm `}>
       <Card.Body  >
         <div className='styleIcon'>
-<h3 className='arwShow' onClick={()=>{navigate("/")}}><TiArrowLeftThick /></h3>
+<h6 className='arwShow' onClick={()=>{navigate("/")}}><TiArrowLeftThick /></h6>
 <h3 className='hrtShow'><SlHeart /></h3>
 <h3 className='threeDots'><BsThreeDotsVertical /></h3>
        </div>

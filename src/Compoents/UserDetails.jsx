@@ -24,7 +24,7 @@ if (!user) return <p>⏳ Loading...</p>;
   username={user.name}
   email={user.email}
   phone={user.phone}
-  company={user.company.name}   // 👈 safer
+  company={user.company.name}   
   address={`${user.address.street}, ${user.address.city}`} 
  
   showDetails={true}

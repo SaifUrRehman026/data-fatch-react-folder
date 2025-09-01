@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import CustomCard from './Compoents/customCard';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import './App.css';
 import axios from 'axios';
 
@@ -35,26 +35,19 @@ function App() {
 
 );
 
-  const centerStyle = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    fontSize: "20px",
-    fontWeight: "bold",
-    minHeight: "50vh"
-  };
+
 
   if (loading) {
-    return <p style={centerStyle}>⏳ Loading users...</p>;
+    return <p className='centerStyle'>⏳ Loading users...</p>;
   }
 
   if (error) {
-    return <p style={centerStyle}>❌ Error: {error}</p>;
+    return <p className='centerStyle'>❌ Error: {error}</p>;
   }
 
   return (
-    <div className={`app-container mt-3 ${theme}`}>
-      <Container >
+    <div className={`app-container  ${theme}`}>
+      <container-fluid>
         <div className='searchbar mb-3'>
         <input type="text" placeholder='search here '
          value={search} onChange={(e)=>setSearch(e.target.value)} className='form-control'/>
@@ -82,11 +75,12 @@ function App() {
                 address={user.address}
                 showDetails={false}
                 theme={theme} 
+                // image={user.image}
               />
             </Col>
           ))}
         </Row>
-      </Container>
+      </container-fluid >
     </div>
   );
 }

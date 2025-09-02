@@ -48,7 +48,7 @@ const CustomCard = ({
 
         <Card.Title className="usercrd">{username}</Card.Title>
         <Card.Text className="crd">
-          <strong>Email:</strong> {email} <br />
+          <strong>Email:</strong> <span className="text-clr">{email}</span>  <br />
           <strong>Phone:</strong> {phone} <br />
           {showDetails && (
             <>

@@ -8,27 +8,26 @@ const UserDetail = () => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
 
-useEffect(() => {
-  axios
-    .get(`https://jsonplaceholder.typicode.com/users/${id}`)
-    .then((res) => setUser(res.data))
-    .catch((err) => setError("❌ User not found"));
-}, [id]);
+  useEffect(() => {
+    axios
+      .get(`https://jsonplaceholder.typicode.com/users/${id}`)
+      .then((res) => setUser(res.data))
+      .catch((err) => setError("❌ User not found"));
+  }, [id]);
 
-if (error) return <p>{error}</p>;
-if (!user) return <p>⏳ Loading...</p>;
+  if (error) return <p>{error}</p>;
+  if (!user) return ;
 
   return (
     <div className="container mt-5 d-flex justify-content-center">
-    <CustomCard
-  username={user.name}
-  email={user.email}
-  phone={user.phone}
-  company={user.company.name}   
-  address={`${user.address.street}, ${user.address.city}`} 
- 
-  showDetails={true}
-/>
+      <CustomCard
+        username={user.name}
+        email={user.email}
+        phone={user.phone}
+        company={user.company.name}
+        address={`${user.address.street}, ${user.address.city}`}
+        showDetails={true}
+      />
     </div>
   );
 };

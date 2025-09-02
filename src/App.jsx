@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className={`app-container  ${theme}`}>
-      <container-fluid>
+      <container>
         <div className='nav'>
         <div className='searchbar mb-3'>
         <input type="text" placeholder='search here '
@@ -62,7 +62,7 @@ function App() {
           </Button>
         </div>
 
-        <Row className="g-4 cards-grid">
+        <Row className="g-6 cards-grid">
           {filterUsers.map((user) => (
             <Col key={user.id} xs={12} sm={6} md={4} lg={4}>
               <CustomCard
@@ -79,7 +79,7 @@ function App() {
             </Col>
           ))}
         </Row>
-      </container-fluid >
+      </container >
     </div>
   );
 }

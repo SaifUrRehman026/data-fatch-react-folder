@@ -48,14 +48,13 @@ function App() {
   return (
     <div className={`app-container  ${theme}`}>
       <container-fluid>
+        <div className='nav'>
         <div className='searchbar mb-3'>
         <input type="text" placeholder='search here '
          value={search} onChange={(e)=>setSearch(e.target.value)} className='form-control'/>
         </div>
-        <div className="d-flex justify-content-between align-items-center mb-4">
-          <h1>Fetch data from API</h1>
           
-          <Button 
+          <Button className='themeBtn'
             variant={theme === "light" ? "dark" : "light"} 
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >

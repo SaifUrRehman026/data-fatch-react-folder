@@ -7,21 +7,37 @@
 }
 
 .card-wrapper {
-  flex: 0 0 auto;     
+  flex: 0 0 auto;  
+  width: 100%;   /* grid ke column ka poora space le */
+  max-width: 100%; 
+  /* box-sizing: border-box;   */
 }
 .searchbar{
-  float:right;
+  /* float:right; */
   margin-top: 10px ; 
   margin-right: 40PX;
   margin-left: 30px;
+  width: 250px;
+  height: 40px;
 }
 
+.nav{
+  /* float: right; */
+  height: 60px;
+  width: 100%;
+  padding-top: 15px;
+  padding-right: 50px;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: end;
+  margin-bottom: 15px;
+}
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 5rem; 
-  padding: 1rem;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  gap: 1.5rem; 
+  padding-right: 2rem 2rem;
 }
 
   .centerStyle {
@@ -31,4 +47,9 @@
     font-size: 20px;
     font-weight: bold;
     min-height: 50vh;
+  }
+
+  .themeBtn{
+    height: 40px;
+    margin-top: 10px;
   }

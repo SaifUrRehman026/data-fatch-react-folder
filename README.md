@@ -1,6 +1,9 @@
 # React + Vite
 
-https://github.com/SaifUrRehman026/data-fatch-react-folder/blob/main/cardProject.jpg?raw=true
+
+![image alt]([relative%20path/to/img.jpg?raw=true "Title"](https://github.com/SaifUrRehman026/data-fatch-react-folder/blob/main/cardProject.jpg?raw=true))
+
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

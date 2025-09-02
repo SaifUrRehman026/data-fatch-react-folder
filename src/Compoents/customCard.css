@@ -1,30 +1,28 @@
 .custom-card {
   background-color: #fdfeff;
-  border: 1px solid #ccc;
+  border: none;
   width: 300px;
   height: 100%;
   margin-top: 10px;
   margin-left: 30px;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5)!important ;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4)!important ;
 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .custom-card:hover {
   transform: translateY(-7px);
-  box-shadow: 0px 0px 20px rgba(182, 91, 194, 0.5) !important;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4)!important ;
 }
 /* Light Mode */
 .app-container.light {
   background-color: #e9eef4;
   color: #212529;
   max-width: 100%;
-  /* padding-right: 10px; */
 }
 
 .custom-card.light {
   background-color: #fdfeff;
-  border: 1px solid #ddd;
   color: #212529;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
 }
@@ -37,7 +35,6 @@
 
 .custom-card.dark {
   background-color: #2F334C;
-  border: 1px solid #555;
   color: #f8f9fa;
 }
 
@@ -60,7 +57,7 @@
   margin: 0 auto;
   display: block;
   height: 100px;
- box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+ box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
 
 
   /* padding-top: 5px; */
@@ -91,10 +88,12 @@
 
 .detailsBtn {
   border-radius: 13px;
-  width: 132px;
+  width: 120px;
   height: 33px;
+  color: white;
+  font-size: 12px;
   background: linear-gradient(90deg, #b65bc2, #ff69b4);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
 
   margin-top: 10px;
   border: none;
@@ -114,7 +113,7 @@
   width: 70px;
   height: 70px;
   background: linear-gradient(90deg, #a91c6e, #d5538b);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
 
   border-radius: 50%;
   margin-top: 30px;
@@ -141,7 +140,7 @@
   width: 70px;
   height: 70px;
   background: linear-gradient(90deg, #0767FE, #32B4FA);
- box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+ box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
 
   border-radius: 50%;
   margin-top: 30px;
@@ -165,7 +164,7 @@
   width: 70px;
   height: 70px;
   background: linear-gradient(90deg, #5d4fe0, #7d9dde);
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
 
   border-radius: 50%;
   margin-top: 30px;

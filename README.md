@@ -1,7 +1,7 @@
 # React + Vite
 
 
-![image alt]([relative%20path/to/img.jpg?raw=true "Title"](https://github.com/SaifUrRehman026/data-fatch-react-folder/blob/main/cardProject.jpg?raw=true))
+![image alt](https://github.com/SaifUrRehman026/data-fatch-react-folder/blob/main/cardProject.jpg?raw=true)
 
 
 

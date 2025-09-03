@@ -9,23 +9,23 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [theme, setTheme] = useState("light"); 
-  const [search, setSearch] = useState(""); 
+  const [search, setSearch] = useState("");
+
+  const fetchData = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      const response = await axios.get("https://jsonplaceholder.typicode.com/users");
+      setUserData(response.data);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-
-        const response = await axios.get("https://jsonplaceholder.typicode.com/users");
-        setUserData(response.data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
     fetchData();
   }, []);
 

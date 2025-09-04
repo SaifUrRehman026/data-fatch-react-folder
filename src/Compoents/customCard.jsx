@@ -21,7 +21,12 @@ const CustomCard = ({
   showDetails,
   theme,
 }) => {
+<<<<<<< HEAD
   const randomImage = images[Math.floor(Math.random() * images.length)];
+=======
+  const randomIndex = Math.floor(Math.random() * images.length);
+  const randomImage = images[randomIndex];
+>>>>>>> 9b9c57b7f7e2b263c22256cb990fb65af85db99d
   const navigate = useNavigate();
   return (
     <Card className={`h-100 custom-card ${theme}  `}>
@@ -31,7 +36,10 @@ const CustomCard = ({
             className="arwShow"
             onClick={() => 
               navigate("/")}
+<<<<<<< HEAD
               style={{ display: showDetails ? "block" : "none" }}
+=======
+>>>>>>> 9b9c57b7f7e2b263c22256cb990fb65af85db99d
             
           >
             <IoIosArrowRoundBack />

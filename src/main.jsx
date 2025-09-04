@@ -8,7 +8,10 @@ import { ThemeProvider } from './ThemeContext.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    
     <ThemeProvider>
+      
+     
       <Router>
         <Routes>
           <Route path="/" element={<App />} />
@@ -16,5 +19,6 @@ createRoot(document.getElementById('root')).render(
         </Routes>
       </Router>
     </ThemeProvider>
+   
   </StrictMode>
 );

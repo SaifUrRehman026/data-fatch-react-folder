@@ -2,8 +2,13 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CustomCard from "./customCard";
+import { Row, Col, Button } from 'react-bootstrap';
+import { useTheme } from '../ThemeContext.jsx';
+import ThemeButton from "./ThemeButton";
+
 
 const UserDetail = () => {
+   const { theme, toggleTheme } = useTheme();
   const { id } = useParams();
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
@@ -19,7 +24,14 @@ const UserDetail = () => {
   if (!user) return ;
 
   return (
-    <div className="container mt-5 d-flex justify-content-center">
+    <>
+    <span className={`d-flex justify-content-end ter `}>
+<ThemeButton  theme={theme} toggleTheme={toggleTheme} />
+    </span>
+
+    <div className={`container pt-5 d-flex justify-content-center`}>
+       
+          
       <CustomCard
         username={user.name}
         email={user.email}
@@ -29,6 +41,7 @@ const UserDetail = () => {
         showDetails={true}
       />
     </div>
+    </>
   );
 };
 

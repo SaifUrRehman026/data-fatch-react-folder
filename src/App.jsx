@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 import CustomCard from './Compoents/customCard';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Container } from 'react-bootstrap';
 import './App.css';
 import axios from 'axios';
 import { useTheme } from './ThemeContext.jsx';
+import Navbar from './Compoents/Navbar';
 
 function App() {
     const { theme, toggleTheme } = useTheme();
@@ -48,23 +49,60 @@ function App() {
   }
 
   return (
-    <div className={`app-container  ${theme}`}>
+   <div className={`app-container  ${theme}`}>
       <container>
-        <div className='nav'>
+
+         
+          <Navbar
+        theme={theme}
+        toggleTheme={toggleTheme}
+        search={search}
+        setSearch={setSearch}
+      />
+
+    
+        {/* <div className='nav'>
         <div className='searchbar mb-3'>
         <input type="text" placeholder='search here '
          value={search} onChange={(e)=>setSearch(e.target.value)} className='form-control'/>
         </div>
 
-        
           
-          { <Button className='themeBtn'
+           <Button className='themeBtn'
             variant={theme === "light" ? "dark" : "light"} 
             onClick={toggleTheme}
           >
             {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
-          </Button> }
-        </div>
+          </Button> 
+        </div> */}
+
+
+{/* <div className="nav">
+  <div className="row align-items-center">
+    <div className="col-7">
+      <input
+        type="text"
+        placeholder="search here"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        className="form-control"
+      />
+    </div>
+    <div className="col-5 text-end">
+      <Button
+        className="themeBtn"
+        variant={theme === "light" ? "dark" : "light"}
+        onClick={toggleTheme}
+      >
+        {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+      </Button>
+    </div>
+  </div>
+</div> */}
+
+
+
+
 
         <Row className="g-6 cards-grid">
           {filterUsers.map((user) => (

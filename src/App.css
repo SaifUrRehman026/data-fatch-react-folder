@@ -4,8 +4,8 @@
   gap: 1rem;
   padding: 1rem;
   scrollbar-width: thin;
-  /* margin-left: 30px; */
-  /* margin-right: 130px; */
+  /* margin-left: 30px; 
+   margin-right: 130px; */
 }
 
 .card-wrapper {
@@ -14,13 +14,14 @@
   max-width: 100%;
   /* box-sizing: border-box;   */
 }
-.searchbar {
+ .searchbar {
   /* float:right; */
   margin-top: 10px;
   margin-right: 40px;
   margin-left: 30px;
   width: 250px;
-  height: 40px;
+  height: 45px;
+  /* padding-top: 20px; */
 }
 
 .nav {
@@ -30,17 +31,17 @@
   padding-top: 15px;
   padding-right: 50px;
   /* background-color: aqua; */
-  display: flex;
+  display:flex;
   justify-content: end;
   margin-bottom: 15px;
-}
+} 
 
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 5rem;
-  padding: 1rem 2rem;
-  margin-left: 36px;
+  padding: 1rem 2rem; 
+   margin-left: 36px;
   margin-right: 166px;
 }
 

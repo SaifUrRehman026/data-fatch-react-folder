@@ -11,6 +11,7 @@ import { ImBehance } from "react-icons/im";
 import { PiBeachBallLight } from "react-icons/pi";
 import { BiLogoUpwork } from "react-icons/bi";
 import { useTheme } from "../ThemeContext";
+// import Navbar from './Navbar';
 
 const CustomCard = ({
   id,
@@ -22,14 +23,17 @@ const CustomCard = ({
   showDetails,
   // theme,
 }) => {
+   const { theme, toggleTheme } = useTheme();
 
- const { theme } = useTheme(); 
   const randomImage = images[Math.floor(Math.random() * images.length)];
 
  
   const navigate = useNavigate();
   return (
+    <>
+     
     <Card className={`h-100  custom-card ${theme}  `}>
+       
       <Card.Body>
         <div className="styleIcon">
           <h6
@@ -105,6 +109,7 @@ const CustomCard = ({
         </Card.Text>
       </Card.Body>
     </Card>
+    </>
   );
 };
 

@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import CustomCard from "./customCard";
-import { IoIosArrowRoundBack } from "react-icons/io";
 
 const UserDetail = () => {
   const { id } = useParams();

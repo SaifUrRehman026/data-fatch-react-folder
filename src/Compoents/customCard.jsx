@@ -10,6 +10,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { ImBehance } from "react-icons/im";
 import { PiBeachBallLight } from "react-icons/pi";
 import { BiLogoUpwork } from "react-icons/bi";
+import { useTheme } from "../ThemeContext";
 
 const CustomCard = ({
   id,
@@ -19,28 +20,23 @@ const CustomCard = ({
   company,
   address,
   showDetails,
-  theme,
+  // theme,
 }) => {
-<<<<<<< HEAD
+
+ const { theme } = useTheme(); 
   const randomImage = images[Math.floor(Math.random() * images.length)];
-=======
-  const randomIndex = Math.floor(Math.random() * images.length);
-  const randomImage = images[randomIndex];
->>>>>>> 9b9c57b7f7e2b263c22256cb990fb65af85db99d
+
+ 
   const navigate = useNavigate();
   return (
-    <Card className={`h-100 custom-card ${theme}  `}>
+    <Card className={`h-100  custom-card ${theme}  `}>
       <Card.Body>
         <div className="styleIcon">
           <h6
             className="arwShow"
             onClick={() => 
               navigate("/")}
-<<<<<<< HEAD
-              style={{ display: showDetails ? "block" : "none" }}
-=======
->>>>>>> 9b9c57b7f7e2b263c22256cb990fb65af85db99d
-            
+             style={{ visibility: showDetails ? "visible" : "hidden" }}
           >
             <IoIosArrowRoundBack />
           </h6>

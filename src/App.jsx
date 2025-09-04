@@ -3,12 +3,14 @@ import CustomCard from './Compoents/customCard';
 import { Row, Col, Button } from 'react-bootstrap';
 import './App.css';
 import axios from 'axios';
+import { useTheme } from './ThemeContext.jsx';
 
 function App() {
+    const { theme, toggleTheme } = useTheme();
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [theme, setTheme] = useState("light"); 
+  // const [theme, setTheme] = useState("light"); 
   const [search, setSearch] = useState("");
 
   const fetchData = async () => {
@@ -53,13 +55,15 @@ function App() {
         <input type="text" placeholder='search here '
          value={search} onChange={(e)=>setSearch(e.target.value)} className='form-control'/>
         </div>
+
+        
           
-          <Button className='themeBtn'
+          { <Button className='themeBtn'
             variant={theme === "light" ? "dark" : "light"} 
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            onClick={toggleTheme}
           >
             {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
-          </Button>
+          </Button> }
         </div>
 
         <Row className="g-6 cards-grid">

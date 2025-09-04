@@ -21,6 +21,7 @@ const CustomCard = ({
   showDetails,
   theme,
 }) => {
+  const randomImage = images[Math.floor(Math.random() * images.length)];
   const navigate = useNavigate();
   return (
     <Card className={`h-100 custom-card ${theme}  `}>
@@ -28,9 +29,10 @@ const CustomCard = ({
         <div className="styleIcon">
           <h6
             className="arwShow"
-            onClick={() => {
-              navigate("/");
-            }}
+            onClick={() => 
+              navigate("/")}
+              style={{ display: showDetails ? "block" : "none" }}
+            
           >
             <IoIosArrowRoundBack />
           </h6>
@@ -42,7 +44,7 @@ const CustomCard = ({
           </h3>
         </div>
         <div className="profile-wrapper mx-auto ">
-          <Card.Img className="profile_dp" src={images.profile} />
+          <Card.Img className="profile_dp" src={randomImage} />
           <span className="verified-badge">✓</span>
         </div>
 
@@ -52,8 +54,10 @@ const CustomCard = ({
           <strong>Phone:</strong> {phone} <br />
           {showDetails && (
             <>
+             
               <strong>Company:</strong> {company} <br />
               <strong>Address:</strong> {address}
+            
             </>
           )}
           {!showDetails && (

@@ -10,7 +10,7 @@ const Navbar = ({ theme, toggleTheme, search, setSearch }) => {
         placeholder="Search here..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        className="form-control w-50"
+        className="form-control  inputtext"
       />
 
       {/* 🌙 Theme Toggle Button */}

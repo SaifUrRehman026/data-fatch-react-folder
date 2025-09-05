@@ -11,17 +11,17 @@ const UserDetail = () => {
    const { theme, toggleTheme } = useTheme();
   const { id } = useParams();
   const [user, setUser] = useState(null);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get(`https://jsonplaceholder.typicode.com/users/${id}`)
-      .then((res) => setUser(res.data))
-      .catch((err) => setError("❌ User not found"));
+     const storedUsers = JSON.parse(localStorage.getItem("userData")) || [];
+    // matching id ka user find karo
+    const foundUser = storedUsers.find((u) => u.id === parseInt(id));
+    setUser(foundUser);
   }, [id]);
 
-  if (error) return <p>{error}</p>;
-  if (!user) return ;
+  // if (error) return <p>{error}</p>;
+  if (!user) return  ;
 
   return (
     <>
@@ -39,6 +39,7 @@ const UserDetail = () => {
         company={user.company.name}
         address={`${user.address.street}, ${user.address.city}`}
         showDetails={true}
+        image={user.image}
       />
     </div>
     </>

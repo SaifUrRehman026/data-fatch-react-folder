@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./customCard.css";
 import { Link, useNavigate } from "react-router-dom";
-import images from "../assets/images";
+
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { SlHeart } from "react-icons/sl";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -21,11 +21,12 @@ const CustomCard = ({
   company,
   address,
   showDetails,
+  image,
   // theme,
 }) => {
    const { theme, toggleTheme } = useTheme();
 
-  const randomImage = images[Math.floor(Math.random() * images.length)];
+  // const randomImage = images[Math.floor(Math.random() * images.length)];
 
  
   const navigate = useNavigate();
@@ -52,7 +53,7 @@ const CustomCard = ({
           </h3>
         </div>
         <div className="profile-wrapper mx-auto ">
-          <Card.Img className="profile_dp" src={randomImage} />
+          <Card.Img className="profile_dp" src={image} />
           <span className="verified-badge">✓</span>
         </div>
 

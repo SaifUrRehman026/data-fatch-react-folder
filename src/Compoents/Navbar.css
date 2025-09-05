@@ -1,10 +1,10 @@
-.searchbar {
+.inputtext {
   /* float:right; */
   margin-top: 10px;
   margin-right: 40px;
   margin-left: 30px;
-  /* width: 50px; */
-  height: 35px;
+  width: 300px;
+  height: 40px;
   /* padding-top: 20px; */
 }
 

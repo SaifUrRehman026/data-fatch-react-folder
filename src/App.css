@@ -14,27 +14,7 @@
   max-width: 100%;
   /* box-sizing: border-box;   */
 }
- .searchbar {
-  /* float:right; */
-  margin-top: 10px;
-  margin-right: 40px;
-  margin-left: 30px;
-  width: 250px;
-  height: 45px;
-  /* padding-top: 20px; */
-}
 
-.nav {
-  /* float: right; */
-  height: 60px;
-  width: 100%;
-  padding-top: 15px;
-  padding-right: 50px;
-  /* background-color: aqua; */
-  display:flex;
-  justify-content: end;
-  margin-bottom: 15px;
-} 
 
 .cards-grid {
   display: grid;

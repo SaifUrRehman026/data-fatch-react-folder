@@ -39,9 +39,16 @@ function App() {
   }, []);
 
 // SEARCH BAR CODE 
-  const filterUsers=userData.filter(user=>user.name.toLowerCase().includes(search.toLowerCase()) ||
-  user.email.toLowerCase().includes(search.toLowerCase())
+//   const filterUsers=userData.filter(user=>user.name.toLowerCase().includes(search.toLowerCase()) ||
+//   user.email.toLowerCase().includes(search.toLowerCase())
 
+// );
+
+
+const filterUsers = userData.filter(user => 
+  Object.values(user).some(value => 
+    value.toString().toLowerCase().includes(search.toLowerCase())
+  )
 );
 
 
@@ -55,7 +62,7 @@ function App() {
 
   return (
    <div className={`app-container  ${theme}`}>
-      <container>
+      <Container-fluid>
           <Navbar
         theme={theme}
         toggleTheme={toggleTheme}
@@ -79,7 +86,7 @@ function App() {
             </Col>
           ))}
         </Row>
-      </container >
+      </Container-fluid>
     </div>
   );
 }

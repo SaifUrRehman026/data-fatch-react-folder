@@ -39,3 +39,38 @@
 </div> */}
 
 
+// function getAllValues(obj) {
+//   let values = [];
+
+//   for (let key in obj) {
+//     const val = obj[key];
+//     if (val && typeof val === "object") {
+//       values = values.concat(getAllValues(val)); // go deeper
+//     } else {
+//       values.push(val);
+//     }
+//   }
+
+//   return values;
+// }
+
+// // filtering with search
+// const filterUsers = userData.filter(user =>
+//   getAllValues(user).some(value =>
+//     value?.toString().toLowerCase().includes(search.toLowerCase())
+//   )
+// );
+
+
+
+
+
+
+
+// const searchFields = ["name", "email", "phone", "company"]; // jo fields chahiye
+
+// const filterUsers = userData.filter(user =>
+//   searchFields.some(field =>
+//     user[field]?.toString().toLowerCase().includes(search.toLowerCase())
+//   )
+// );

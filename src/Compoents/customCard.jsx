@@ -74,6 +74,7 @@ const CustomCard = ({
               <button className="detailsBtn"> See More</button>
             </Link>
           )}
+           </Card.Text>
           <div className="followers">
             <div className="read">
               <div className="read-icn">
@@ -94,20 +95,20 @@ const CustomCard = ({
           </div>
           <div className="followers-txt">
             <div className="read-txt">
-              <h5>12.8k</h5>
-              <p>Followers</p>
+              <span className="kk">12.8k</span><br />
+              <span className="foll">Followers</span>
             </div>
 
             <div className="read-txt">
-              <h5>12.8k</h5>
-              <p>Followers</p>
+              <span className="kk">12.8k</span><br />
+              <span className="foll">Followers</span>
             </div>
             <div className="read-txt">
-              <h5>12.8k</h5>
-              <p>Followers</p>
+              <span className="kk">12.8k</span><br />
+              <span className="foll">Followers</span>
             </div>
           </div>
-        </Card.Text>
+        {/* </Card.Text> */}
       </Card.Body>
     </Card>
     </>

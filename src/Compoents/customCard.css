@@ -182,13 +182,23 @@ html, body {
   margin-top: 10px;
 }
 
-.read-txt p {
+.read-txt .foll {
+  width: 100px;
+  height: 60px;
+  font-size: 14px;
+  /* margin-right: 20px; */
+ color:#80809a ;
+  margin-left: 1px;
+  margin-top: 10px;
+}
+
+.read-txt .kk {
   width: 60px;
   height: 60px;
-  margin-right: 20px;
- color:#80809a ;
-  /* margin-left: 2px; */
-  margin-top: 10px;
+ font-size: 17px;
+ font-weight: bold;
+  padding-top: 10px;
+  margin-left: 10px;
 }
 .styleIcon {
   display: flex;

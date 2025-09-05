@@ -15,12 +15,11 @@ const UserDetail = () => {
 
   useEffect(() => {
      const storedUsers = JSON.parse(localStorage.getItem("userData")) || [];
-    // matching id ka user find karo
     const foundUser = storedUsers.find((u) => u.id === parseInt(id));
     setUser(foundUser);
   }, [id]);
 
-  // if (error) return <p>{error}</p>;
+ 
   if (!user) return  ;
 
   return (

@@ -4,7 +4,7 @@ import ThemeButton from "./ThemeButton";
 const Navbar = ({ theme, toggleTheme, search, setSearch }) => {
   return (
     <div className="nav   d-flex justify-content-end align-items-end">
-      {/* 🔍 Search bar */}
+      {/*  Search bar */}
       <input
         type="text"
         placeholder="Search here..."
@@ -13,16 +13,10 @@ const Navbar = ({ theme, toggleTheme, search, setSearch }) => {
         className="form-control  inputtext"
       />
 
-      {/* 🌙 Theme Toggle Button */}
+      {/* {Theme  Button } */}
 
       <ThemeButton theme={theme} toggleTheme={toggleTheme} />
-      {/* <Button
-        className="themeBtn ms-3"
-        variant={theme === "light" ? "dark" : "light"}
-        onClick={toggleTheme}
-      >
-        {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
-      </Button> */}
+     
     </div>
   );
 };

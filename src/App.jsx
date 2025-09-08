@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import CustomCard from './Compoents/customCard';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col} from 'react-bootstrap';
 import './App.css';
 import axios from 'axios';
 import { useTheme } from './ThemeContext.jsx';
@@ -38,13 +38,9 @@ function App() {
     fetchData();
   }, []);
 
-// SEARCH BAR CODE 
-//   const filterUsers=userData.filter(user=>user.name.toLowerCase().includes(search.toLowerCase()) ||
-//   user.email.toLowerCase().includes(search.toLowerCase())
-
-// );
 
 
+// serach BAR
 const filterUsers = userData.filter(user => 
   Object.values(user).some(value => 
     value.toString().toLowerCase().includes(search.toLowerCase())

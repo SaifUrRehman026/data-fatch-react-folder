@@ -10,7 +10,9 @@ import images from "./assets/images";
 function App() {
     const { theme, toggleTheme } = useTheme();
   const [userData, setUserData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(() => {
+  return localStorage.getItem("userData") ? false : true;
+});
   const [error, setError] = useState(null);
   // const [theme, setTheme] = useState("light"); 
   const [search, setSearch] = useState("");
@@ -35,9 +37,15 @@ function App() {
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    const localData=localStorage.getItem("userData")
 
+   if(localData){
+setUserData(JSON.parse(localData));
+
+   }else{
+    fetchData();
+   }
+  }, []);
 
 
 // serach BAR

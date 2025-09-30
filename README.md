@@ -1,7 +1,7 @@
 # React + Vite
 
 
-![image alt](https://github.com/SaifUrRehman026/data-fatch-react-folder/blob/main/card%20project%20ss.jpg?raw=true))
+![image alt](https://github.com/SaifUrRehman026/data-fatch-react-folder/blob/main/ss2.jpg?raw=true))
 
 
 
